@@ -31,7 +31,7 @@ public class EjercicioN10 {
         int num = leer.nextInt();
             suma = num + suma;
         }
-      
+        System.out.println("Se supero el limite establecido");
     }
     
     

@@ -51,7 +51,7 @@ public class EjercicioN12 {
         while( !"&&&&&".equals(cadena));
         int incorrectas = total - correctas;
         System.out.println("El numero de lecturas correctas ingresadas es/son: " + correctas);   
-        System.out.println("El numero de lecturas incorrectas ingresadas es/ son: " + incorrectas);
+        System.out.println("El numero de lecturas incorrectas ingresadas es/ son: " + (incorrectas-1));
     }
     
     

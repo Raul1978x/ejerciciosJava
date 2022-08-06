@@ -7,6 +7,7 @@ package javaejercicios;
 
 import java.util.Scanner;
 
+
 /**
  *
  * @author Raul
@@ -32,14 +33,15 @@ public class EjercicioN1 {
         */      
         Scanner leer = new Scanner(System.in);
         
+        
         System.out.println("Ingrese el primer numero");
         int num1 = leer.nextInt();
         
         System.out.println("Ingrese el segundo numero");
         int num2 = leer.nextInt();
         
-        int resultado = num1 + num2;
-        System.out.println("El resultado es: " + resultado);
+        //int resultado = num1 + num2;
+        System.out.println("El resultado es: " + (num1+num2));
     }
     
 }

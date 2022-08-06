@@ -25,7 +25,7 @@ public class EjercicioN7 {
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese una frase");
         String frase = leer.nextLine();
-        if("eureka".equals(frase)){
+        if("eureka".equalsIgnoreCase(frase)){
             System.out.println("Correcto");
             }
         else {

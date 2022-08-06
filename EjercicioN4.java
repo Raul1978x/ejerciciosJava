@@ -5,6 +5,8 @@
  */
 package javaejercicios;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Raul
@@ -19,8 +21,10 @@ public class EjercicioN4 {
         4. Dada una cantidad de grados centígrados se debe mostrar su equivalente en grados
         Fahrenheit. La fórmula correspondiente es: F = 32 + (9 * C / 5).
         */
-        int tempCelsius = 22;
-        double conversorFa = tempCelsius + (9* tempCelsius/5);
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese la temperatura en °C");
+        double tempCelsius = leer.nextDouble();
+        double conversorFa =  32 + (9* tempCelsius/5);
         System.out.println("La temperatura " + tempCelsius + "°C expresada en grados Fahrenheit es: " + conversorFa + "°F");
         
     }
