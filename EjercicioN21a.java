@@ -5,14 +5,13 @@
  */
 package javaejercicios;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
  *
  * @author Raul
  */
-public class EjercicioN21 {
+public class EjercicioN21a {
 
     /**
      * @param args the command line arguments
@@ -44,57 +43,76 @@ public class EjercicioN21 {
         4,4 - 4,5 - 4,6 - 5,4 - 5,5 - 5,6 - 6,4 - 6,5 - 6,6
          */
         int[][] M1 = new int[10][10];
-
-        Random rnd = new Random();
+        /*int[][]  M = {
+       {1,26,36,47,5,6,72,81,95,10},
+       {11,12,13,21,41,22,67,20,10,61},
+       {56,78,87,90,09,90,17,12,87,67},
+       {41,87,24,56,97,74,87,42,64,35}, 
+       {32,76,79,1,36,5,67,96,12,11}, 
+       {99,13,54,88,89,90,75,12,41,76}, 
+       {67,78,87,45,14,22,26,42,56,78}, 
+       {98,45,34,23,32,56,74,16,19,18}, 
+       {24,67,97,46,87,13,67,89,93,24}, 
+       {21,68,78,98,90,67,12,41,65,12}
+       };
+         */
         int[][] P = new int[3][3];
-        boolean igual = false;
+        boolean retorno;
         Scanner leer = new Scanner(System.in);
-
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
 
-                M1[i][j] = rnd.nextInt(1 - (0) + 1) - 0;
-
+                M1[i][j] = (int) (Math.random() * 100);
                 System.out.print("|" + M1[i][j] + "|");
             }
             System.out.println("");
-
         }
-        System.out.println("fin m1");
-
         System.out.println("");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+                //P[i][j] = (int) (Math.random() * 10);
 
-                P[i][j] = rnd.nextInt(1 - (0) + 1) - 0;
-                System.out.print("|" + P[i][j] + "|");
+                // System.out.print("|" + P[i][j] + "|");
+                P[i][j] = leer.nextInt();
             }
             System.out.println("");
         }
-        System.out.println("Fin p");
-
-        boolean bandera = true;
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                if ((M1[i][j] == P[0][0]) && (M1[i][j + 1] == P[0][1]) && (M1[i][j + 2] == P[0][2])) {
-                    if ((M1[i + 1][j] == P[1][0]) && (M1[i + 1][j + 1] == P[1][1]) && (M1[i + 1][j + 2] == P[1][2])) {
-                        if ((M1[i + 2][j] == P[2][0]) && (M1[i + 2][j + 1] == P[2][1]) && (M1[i + 2][j + 2] == P[2][2])) {
-                            System.out.println("La matriz se encuentra desde la poscicion " + i + " - " + j);
-                            bandera = false;
-                        }
-
-                    }
-
-                }
-
-            }
-
-        }
-
-        if (bandera) {
-            System.out.println("No se encontro");
-        }
+        comparar(M1, P);
 
     }
 
+    public static void comparar(int[][] M1, int[][] P) {
+        boolean igual = false;
+        int cont = 0, contI = 0;
+
+         for (int i = 0; i < 10; i++) {
+             contI += +1;
+            for (int j = 0; j < 10; j++) {
+                
+                
+                if (M1[i][j] == 35) {
+                    cont = j;
+                    System.out.println("35");
+                    System.out.println(contI+ "||" +cont);
+                    for (int k = 0; k < 3; k++) {
+                        for (int l = 0; l < 3; l++) {
+                            if(P[k][l] == M1[i][j]){
+                            igual = true;
+                            j += +1;
+                        }else {
+                                igual = false;
+                            }else 
+                        i += +1;
+
+                    }
+                            }
+                }
+            }
+        }
+        if (igual) {
+            System.out.println("si");
+        } else {
+            System.out.println("no");
+        }
+    }
 }

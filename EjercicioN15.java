@@ -23,7 +23,7 @@ public class EjercicioN15 {
         int[] vector = new int[100];
         for (int i = 0; i < 100; i++) {
             vector[i] = 100 - i;
-            System.out.println(" " + vector[i]);
+            System.out.print(" " + vector[i]);
         }
     }
 }

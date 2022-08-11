@@ -31,7 +31,7 @@ public class EjercicioN12 {
         */
         Scanner leer = new Scanner(System.in);
         
-         String cadena;
+        String cadena;
         int correctas = 0;
         int total = 0;
         
@@ -45,7 +45,7 @@ public class EjercicioN12 {
        total = total +1;
        
        if(cadena.length() <= 5 && ("X".equals(cadena.substring(0,1)) || "O".equals(cadena.substring(0,cadena.length())))){
-           correctas = correctas + 1;
+           correctas = correctas +1;
        }
         }
         while( !"&&&&&".equals(cadena));
